@@ -1,0 +1,34 @@
+﻿@model EmployeeMangementSystem.Models.Employee
+
+<div class="modal fade show" id="editEmployeeModalContent" style="display:block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Employee</h5>
+                <button type="button" class="close" onclick="$('#editEmployeeModal').html('')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editEmployeeForm">
+                    <input type="hidden" name="EmpId" value="@Model.EmpId" />
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input class="form-control" name="F_Name" value="@Model.F_Name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input class="form-control" name="L_Name" value="@Model.L_Name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input class="form-control" name="Phone_Number" value="@Model.Phone_Number" />
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input class="form-control" name="Address" value="@Model.Address" />
+                    </div>
+                    <button type="submit" class="btn btn-success">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
