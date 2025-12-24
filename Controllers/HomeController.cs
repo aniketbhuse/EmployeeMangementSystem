@@ -1,11 +1,13 @@
-﻿using System.Diagnostics;
-using EmployeeMangementSystem.Data;
+﻿using EmployeeMangementSystem.Data;
 using EmployeeMangementSystem.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Diagnostics;
 
 namespace EmployeeMangementSystem.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -16,7 +18,6 @@ namespace EmployeeMangementSystem.Controllers
             _logger = logger;
             _context = context;
         }
-
 
         public IActionResult Index()
         {
