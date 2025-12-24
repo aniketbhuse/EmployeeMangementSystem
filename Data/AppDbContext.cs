@@ -18,5 +18,6 @@ namespace EmployeeMangementSystem.Data
         public DbSet<Department> Department { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<EmployeeAppraisal> EmployeeAppraisal { get;  set; }
+        public DbSet<User> Users { get; set; }
     }
 }

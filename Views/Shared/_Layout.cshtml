@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EmployeeMangementSystem.styles.css" asp-append-version="true" />
+    @if (User.Identity.IsAuthenticated)
+    {
+        <span>Welcome, @User.Identity.Name</span>
+        <a asp-controller="Account" asp-action="Logout">Logout</a>
+    }
+    else
+    {
+        <a asp-controller="Account" asp-action="Login">Login</a>
+    }
+
 </head>
 <body>
     <header>
